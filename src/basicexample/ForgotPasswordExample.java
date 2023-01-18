@@ -20,7 +20,7 @@ public class ForgotPasswordExample {
 
         driver.findElement(By.name("email")).sendKeys("naveen@gmail.com");
         driver.findElement(By.name("submit")).click();
-
+        
         String text = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div")).getText();
         assert text.contains("Your password will be sent to the following email: naveen.s@gmail.com"):"Wrong Confirmation Message";
     }
